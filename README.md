@@ -1,4 +1,4 @@
-# README
+# 🍔 README 
 
 A pet project burger API created by yours truly using Ruby on Rails. 
 
