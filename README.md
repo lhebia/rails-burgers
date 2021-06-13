@@ -14,7 +14,7 @@ Burgers can be pulled with `GET` request from:
 - `6.1.3.2`
 
 #### Deployment instructions
-- One initial deploy only: `$ heroku create`
+- On initial deploy only: `$ heroku create`
 - Push changes from master: `$ git push heroku master: main`
 - With error "Your bundle only supports platfofms...", run: `$ bundle lock --add-platform x86_64-linux`
 - Commit changes
