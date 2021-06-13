@@ -5,6 +5,19 @@ A pet project burger API created by yours truly using Ruby on Rails.
 Burgers can be pulled with `GET` request from: 
 [https://thawing-cliffs-09556.herokuapp.com/api/v1/burgers](https://thawing-cliffs-09556.herokuapp.com/api/v1/burgers)
 
+Returns:
+```json
+{
+    "id": 1,
+    "name": "The Rude Dude",
+    "brand": "Rudy",
+    "price": "9.99",
+    "description": "Double cheese burger with rudy sauce",
+    "created_at": "2021-06-13T21:36:31.394Z",
+    "updated_at": "2021-06-13T21:36:31.394Z"
+  }
+```
+
 ### Things you may want to know:
 
 #### Ruby version
