@@ -1,6 +1,6 @@
 # 🍔 README 
 
-A pet project burger API created by yours truly using Ruby on Rails. 
+A pet project burger REST API created by yours truly using Ruby on Rails. 
 
 Burgers can be pulled with `GET` request from: 
 [https://thawing-cliffs-09556.herokuapp.com/api/v1/burgers](https://thawing-cliffs-09556.herokuapp.com/api/v1/burgers)
