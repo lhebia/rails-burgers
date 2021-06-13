@@ -17,6 +17,7 @@ Burgers can be pulled with `GET` request from:
 - One initial deploy only: `$ heroku create`
 - Push changes from master: `$ git push heroku master: main`
 - With error "Your bundle only supports platfofms...", run: `$ bundle lock --add-platform x86_64-linux`
+- Commit changes
 - Migrate DB: `$ heroku run rake db:migrate`
 - Ensure you have a running dyno: `$ heroku ps:scale web=1`
 - Open on browser: `% heroku open`
