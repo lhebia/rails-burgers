@@ -10,17 +10,8 @@ Things you may want to know:
 * Ruby version
 - `3.0.1`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Rails version
+- `6.1.3.2`
 
 * Deployment instructions
 - One initial deploy only: `$ heroku create`
