@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :burgers, only: [:index, :show, :create, :update, :destroy]
+      resources :reviews, only: [:index, :show, :create, :update, :destroy]
     end
   end
 end
