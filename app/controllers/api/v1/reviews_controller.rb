@@ -3,13 +3,12 @@ module Api
     class ReviewsController < ApplicationController
 
       def index
-        reviews = Review.find_by(hamburger_id: params[:hamburger_id])
+        reviews = Review.where(hamburger_id: params[:hamburger_id])
         render json: reviews, status: 200
       end
 
       def create
         review = Review.new(review_params)
-
         if review.save
           render json: review, status: 200
         else
@@ -28,7 +27,6 @@ module Api
 
       def update
         review = Review.find(params[:id])
-
         if review.update(review_params)
           render json: review, status: 200
         else
@@ -38,7 +36,6 @@ module Api
 
       def destroy
         review = Review.find(params[:id])
-
         if review
           review.destroy
           render json: { message: "Delete request complete" }
