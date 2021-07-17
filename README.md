@@ -26,6 +26,13 @@ Returns:
 #### Rails version
 - `6.1.3.2`
 
+#### Rspec version
+- `3.4.0`
+
+
+#### Run tests with:
+- `bundle exec rspec`
+
 #### Deployment instructions
 - On initial deploy only: `$ heroku create`
 - Push changes from master: `$ git push heroku master: main`
