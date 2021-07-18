@@ -1,6 +1,7 @@
 module Api
   module V1
     class BurgersController < ApplicationController
+      before_action :set_burger, only: [:show, :update, :destroy]
 
       def index
         burgers = Hamburger.all
@@ -8,9 +9,8 @@ module Api
       end
 
       def show
-        burger = Hamburger.find(params[:id])
-        if burger
-          render json: burger, status: 200
+        if @burger
+          render json: @burger, status: 200
         else 
           render json: { error: "Burger not found" }
         end
@@ -26,21 +26,14 @@ module Api
       end
 
       def update
-        burger = Hamburger.find(params[:id])
-        if burger.update(
-          name: params[:name],
-          brand: params[:brand],
-          description: params[:description],
-          price: params[:price]
-          )
-          render json: burger, status: 200
+        if @burger.update((burger_params))
+          render json: @burger, status: 200
         else
           render json: { error: "Failed to update burger" }
         end
       end
 
       def destroy
-        @burger = Hamburger.find(params[:id])
         if @burger
           @burger.destroy
           render json: { message: "Delete request complete" }, status: 200
@@ -50,6 +43,10 @@ module Api
       end
 
       private 
+
+      def set_burger
+        @burger = Hamburger.find(params[:id])
+      end
 
       def burger_params
         params.require(:burger).permit(:name, :brand, :price, :description)
